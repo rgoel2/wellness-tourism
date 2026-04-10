@@ -10,8 +10,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from huggingface_hub import HfApi, create_repo, hf_hub_download
 
-dataset_repo = "<YOUR_HF_USERNAME>/wellness-tourism-data"
-model_repo = "<YOUR_HF_USERNAME>/wellness-tourism-model"
+dataset_repo = "novicetopper/wellness-tourism-data"
+model_repo = "novicetopper/wellness-tourism-model"
 api = HfApi(token=os.getenv("HF_TOKEN"))
 
 X_train_file = hf_hub_download(repo_id=dataset_repo, repo_type="dataset", filename="X_train.csv", token=os.getenv("HF_TOKEN"))
