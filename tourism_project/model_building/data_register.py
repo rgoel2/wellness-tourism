@@ -14,10 +14,8 @@ except Exception:
     create_repo(repo_id=repo_id, repo_type=repo_type, private=False)
     print("Dataset repository created.")
 
-local_file = "../data/tourism.csv"
-api.upload_file(
-    path_or_fileobj=local_file,
-    path_in_repo="tourism.csv",
+api.upload_folder(
+    folder_path="tourism_project/data",
     repo_id=repo_id,
     repo_type=repo_type,
 )
